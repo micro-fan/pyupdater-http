@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "pyupdater-http"
-version = "0.2.0"
+version = "0.4.0"
 description = "Plugin: HTTP upload support"
 authors = ["Kirill Pinchuk <cybergrind@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.6"
 httpx = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
