@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyupdater-http"
-version = "0.1.0"
+version = "0.2.0"
 description = "Plugin: HTTP upload support"
 authors = ["Kirill Pinchuk <cybergrind@gmail.com>"]
 
@@ -10,6 +10,9 @@ httpx = "^0.20.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+
+[tool.poetry.plugins."pyupdater.plugins"]
+"http_uploader" = "pyupdater_http.uploader:HTTPUploader"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -48,4 +51,4 @@ multi_line_output = 3
 sections = ['FUTURE', 'STDLIB', 'THIRDPARTY', 'OWN', 'FIRSTPARTY', 'LOCALFOLDER']
 
 known_first_party = ''
-known_own = ['pytest_tipsi_testing', 'pytest_tipsi_django', 'fan_tools']
+known_own = ['pytest_tipsi_testing', 'fan_tools']
