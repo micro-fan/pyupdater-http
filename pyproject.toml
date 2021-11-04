@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyupdater-http"
-version = "0.5.0"
+version = "0.6.0"
 description = "PyUpdater Plugin: HTTP upload support"
 authors = ["Kirill Pinchuk <cybergrind@gmail.com>"]
 readme = "README.md"

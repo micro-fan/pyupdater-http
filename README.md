@@ -71,6 +71,7 @@ And add configuration in your `config.pyu`
         "data_params": {
           "token": "auth_token_for_upload"
         },
+        "timeout": 600,
         "filename_param": "filename"
       }
     }

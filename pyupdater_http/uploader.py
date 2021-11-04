@@ -4,6 +4,9 @@ import httpx
 from pyupdater.core.uploader import BaseUploader
 
 
+TIMEOUT = 10 * 60
+
+
 class HTTPUploader(BaseUploader):
     name = 'HTTPUploader'
     author = '@cybergrind'
@@ -12,6 +15,7 @@ class HTTPUploader(BaseUploader):
         self.server_url = config['server_url']
         self.data_params = config.get('data_params', {})
         self.filename_param = config.get('filename_param', '')
+        self.timeout = config.get('timeout', TIMEOUT)
 
     def set_config(self, config):
         server_name = self.get_answer("Please enter server name\n--> ")
@@ -23,6 +27,6 @@ class HTTPUploader(BaseUploader):
         data = {**self.data_params}
         if self.filename_param:
             data[self.filename_param] = Path(filename).name
-        r = httpx.post(self.server_url, files=files, data=data)
+        r = httpx.post(self.server_url, files=files, data=data, timeout=self.timeout)
         r.raise_for_status()
         return True
