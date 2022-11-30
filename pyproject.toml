@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pyupdater-http"
-version = "0.6.0"
+version = "0.7.0"
 description = "PyUpdater Plugin: HTTP upload support"
 authors = ["Kirill Pinchuk <cybergrind@gmail.com>"]
 readme = "README.md"
@@ -9,8 +9,8 @@ repository = "https://github.com/micro-fan/pyupdater-http"
 keywords = ["pyupdater", "pyupdater-plugin", "http"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
-httpx = "^0.20.0"
+python = ">=3.7"
+httpx = ">=0.23.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

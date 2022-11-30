@@ -27,6 +27,8 @@ class HTTPUploader(BaseUploader):
         data = {**self.data_params}
         if self.filename_param:
             data[self.filename_param] = Path(filename).name
-        r = httpx.post(self.server_url, files=files, data=data, timeout=self.timeout)
+        r = httpx.post(
+            self.server_url, files=files, data=data, timeout=self.timeout, follow_redirects=True
+        )
         r.raise_for_status()
         return True
